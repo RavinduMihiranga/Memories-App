@@ -3,8 +3,12 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
+import postRoutes from './routes/posts.js';
+
 // initializing app for any express application
 const app = express();
+
+app.use('/posts', postRoutes);
 
 //  to handle request seting up a image upload size limit
 app.use(bodyParser.json({limit: "30mb", extended: true}));
