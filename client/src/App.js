@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, AppBar, Typography} from '@mui/material';
+import {Container, AppBar, Typography, Grow, Grid} from '@mui/material';
 
 import memories from './images/memories.png'
 const App = () => {
@@ -9,6 +9,18 @@ const App = () => {
         <Typography variant="h2" align="center">Memories</Typography>
         <img src={memories} alt="memories" height="500"/>
       </AppBar>
+      <Grow in>
+        <Container>
+          <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
+            <Grid item xs={12} sm={7}>
+              
+            </Grid>
+            <Grid item xs={12} sm={7}>
+              
+            </Grid>
+          </Grid>
+        </Container>
+      </Grow>
 
     </Container>
   )
